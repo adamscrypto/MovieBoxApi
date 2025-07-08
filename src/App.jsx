@@ -22,7 +22,7 @@ useEffect(()=>{
   return (
     <>
       <div className='container'>
-        <CharacterGrid  items={items}  isLoading={isLoading}></CharacterGrid >
+        <CharacterGrid  items={items}  isLoading={isLoading} />
       </div>
         
     </>

@@ -22,7 +22,6 @@ useEffect(()=>{
   return (
     <>
       <div className='container'>
-      Hello
         <CharacterGrid  items={items}  isLoading={isLoading}></CharacterGrid >
       </div>
         

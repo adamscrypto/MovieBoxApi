@@ -1,9 +1,11 @@
 import logo  from '../img/logo.png'
 
+
 const CharacterItems = ({item})=>{
 
 //  console.log(typeof(item))
     return (
+        
     <div className='card'>
       <div className='card-inner'>
         <div className='card-front'>

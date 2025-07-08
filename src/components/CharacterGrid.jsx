@@ -1,15 +1,25 @@
-import React from "react";
+import React, {useState} from "react";
 import CharacterItems from "./CharacterItems.jsx";
+import SearchItems from './SearchItems'
 
 const CharacterGrid = ({items, isLoading})=>{
-  // console.log(isLoading)
+  const [query, setQuery] = useState('')
+ 
+ 
+
+  const filterItems = items.filter(item => 
+    item.name.toLowerCase().includes(query.toLocaleLowerCase()) ||
+    item.email.toLowerCase().includes(query.toUpperCase()))
 
   return isLoading ? (<h1>Loading...</h1>) : (
+        <>
+        <SearchItems query={query}  onChange={setQuery} placeholder="Seach Movies..." />
         <section className="cards" >
-            {items.map(item => (
-                <CharacterItems  item={item} className="card" key={item.id}></CharacterItems>
+            {filterItems.map(item => (
+                <CharacterItems  item={item}  key={item.id}></CharacterItems>
             ))} 
         </section>
+        </>
     )
 }
 

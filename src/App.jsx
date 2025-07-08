@@ -12,7 +12,7 @@ useEffect(()=>{
   const fetchItems = async () => {
     // const result = await axios(`https://api.ksoft.si/lyrics/search`)
     const result = await axios("https://jsonplaceholder.typicode.com/users")
-    console.log(result.data)
+    //console.log(result.data)
     setItems(result.data)
     setIsLoading(false)
   }
